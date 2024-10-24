@@ -8,19 +8,18 @@ namespace ManagementSystem.Models
         public Guid VehicleId { get; set; }   
 
         [Required]
-
         public string VehicleModel { get; set; }
-        [Required]
 
+        [Required]
         public string VehicleLicensePlate { get; set; }
+
         [Required]
+        public string VehicleColor { get; set; }
 
-        public string VehicleColor { get; set;]
-            [Required]
-
-            public string VehicleBrand { get; set; }
         [Required]
-
+        public string VehicleBrand { get; set; }
+        
+        [Required]
         public Guid YardId { get; set; }
         public Yard ? Yard {  get; set; }
 
