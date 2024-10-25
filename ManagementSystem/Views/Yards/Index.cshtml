@@ -5,16 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
-
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+
+<div class="pageYards">
+    <div>Search</div>
+    <div class="containerComponentsYard">
+        @foreach (var item in Model)
+        {
+            <div class="componentYardContainer">
+                <div class="componentYardVehicles">
+                    <span>@Html.DisplayFor(modelItem => item.YardCurrentQuantity)</span>
+                    <p>Vehicles</p>
+                </div>
+                <div class="componentYardInfo">
+                    <p>
+                        <span>@Html.DisplayNameFor(model => model.YardName)</span>
+                        @Html.DisplayFor(modelItem => item.YardName)
+                    </p>
+                    <p>
+                        <span>@Html.DisplayNameFor(model => model.YardAddress)</span>
+                        @Html.DisplayFor(modelItem => item.YardAddress)
+                    </p>
+                    <p>
+                        <span>@Html.DisplayNameFor(model => model.YardCurrentColor)</span>
+                        @Html.DisplayFor(modelItem => item.YardCurrentColor)
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<!--<table class="tableTeste">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.YardName)
+                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.YardAddress)
@@ -32,29 +61,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.YardName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YardAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YardTotalCapacity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YardCurrentQuantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YardCurrentColor)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.YardId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.YardId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.YardId">Delete</a>
-            </td>
-        </tr>
-}
+       </tr>
+        }
     </tbody>
 </table>
+ -->

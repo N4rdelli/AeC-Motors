@@ -84,3 +84,61 @@ body {
 .NavSideBarConfig:hover{
     color: var(--primary-color);
 }
+
+.pageYards{
+    padding: 0.5em 0.5em;
+}
+
+.containerComponentsYard{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    column-gap:1em;
+    row-gap: 1em;
+}
+
+.componentYardContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+    padding: 1em 2em;
+    background: var(--dark-color);
+    width: fit-content;
+    border-radius: 10pt;
+}
+
+.componentYardVehicles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: 0.5em;
+}
+
+.componentYardVehicles > p {
+    margin: 0;
+}
+
+.componentYardVehicles > span{
+    font-size: 2em;
+    margin:0;
+}
+
+.componentYardInfo{
+    display:flex;
+    flex-direction: column;
+}
+
+.componentYardInfo > p {
+    display: inline-flex;
+    align-items: flex-end;
+
+    column-gap: 1em;
+    margin:0;
+}
+
+.componentYardInfo > p > span{
+    font-size: 0.7em;
+    color: var(--secondary-light-color);
+    width: fit-content;
+}
