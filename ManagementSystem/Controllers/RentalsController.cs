@@ -19,14 +19,14 @@ namespace ManagementSystem.Controllers
             _context = context;
         }
 
-        // GET: Rentals
+       
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Rental.Include(r => r.Costumer).Include(r => r.Vehicle);
             return View(await appDbContext.ToListAsync());
         }
 
-        // GET: Rentals/Details/5
+       
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -46,7 +46,7 @@ namespace ManagementSystem.Controllers
             return View(rental);
         }
 
-        // GET: Rentals/Create
+     
         public IActionResult Create()
         {
             ViewData["CostumerId"] = new SelectList(_context.Costumer, "CostumerId", "CostumerCPF");
@@ -167,5 +167,16 @@ namespace ManagementSystem.Controllers
         {
             return _context.Rental.Any(e => e.RentalId == id);
         }
-    }
-}
+        public class AluguelController : Controller
+        {
+
+                
+                }
+            }
+        }
+    
+
+        
+
+    
+
