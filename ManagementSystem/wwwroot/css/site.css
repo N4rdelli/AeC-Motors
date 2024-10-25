@@ -1,22 +1,86 @@
-html {
-  font-size: 14px;
+:root {
+    --primary-color: #5967F6;
+    --dark-color: #0D131B;
+    --light-color: #D9EBF2;
+    --secondary-dark-color: #1F252E;
+    --secondary-light-color: #394960;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Tw Cen MT';
+    font-size: 18px;
 }
 
 body {
-  margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+
+    background: var(--secondary-dark-color);
+    color: var(--light-color);
+}
+
+.NavSideBar{
+    display: flex;
+    flex-direction: column;
+
+    padding: 2em;
+    row-gap: 2em;
+
+    background: var(--dark-color);
+    width: fit-content;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.NavSideBarLogo {
+    display: flex;
+    flex-direction: row;
+}
+
+.NavSideBarLogo > a{
+    display: inline-flex;
+    column-gap: 1em;
+    align-items: center;
+
+    text-decoration:none;
+    text-transform:uppercase;
+
+    color: var(--light-color);
+    font-size: 1.5em;
+}
+
+.NavSideBarLinks {
+    display: flex;
+    flex-direction: column;
+    
+    row-gap: 0.5em;
+}
+
+.NavSideBarLinks > a{
+    display: inline-flex;
+    column-gap: 1em;
+    align-items: center;
+
+    text-decoration:none;
+    color: var(--secondary-light-color);
+}
+
+.NavSideBarLinks > a:hover{
+    color: var(--primary-color);
+}
+
+.NavSideBarConfig {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+    width: fit-content;
+    background: none;
+    color: var(--secondary-light-color);
+}
+
+.NavSideBarConfig:hover{
+    color: var(--primary-color);
 }
