@@ -1,0 +1,54 @@
+﻿@model ManagementSystem.Models.Yard
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Yard</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="YardName" class="control-label"></label>
+                <input asp-for="YardName" class="form-control" />
+                <span asp-validation-for="YardName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YardAddress" class="control-label"></label>
+                <input asp-for="YardAddress" class="form-control" />
+                <span asp-validation-for="YardAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YardTotalCapacity" class="control-label"></label>
+                <input asp-for="YardTotalCapacity" class="form-control" />
+                <span asp-validation-for="YardTotalCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YardCurrentQuantity" class="control-label"></label>
+                <input asp-for="YardCurrentQuantity" class="form-control" />
+                <span asp-validation-for="YardCurrentQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YardCurrentColor" class="control-label"></label>
+                <input asp-for="YardCurrentColor" class="form-control" />
+                <span asp-validation-for="YardCurrentColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

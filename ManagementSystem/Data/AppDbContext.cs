@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ManagementSystem.Models;
 
 namespace ManagementSystem.Data
 {
@@ -9,5 +10,9 @@ namespace ManagementSystem.Data
         {
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<ManagementSystem.Models.Yard> Yard { get; set; } = default!;
+        public DbSet<ManagementSystem.Models.Vehicle> Vehicle { get; set; } = default!;
+        public DbSet<ManagementSystem.Models.Costumer> Costumer { get; set; } = default!;
+        public DbSet<ManagementSystem.Models.Rental> Rental { get; set; } = default!;
     }
 }

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ManagementSystem.Models.Rental>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Costumer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalPrince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalPaymentStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Costumer.CostumerCPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle.VehicleLicensePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalPrince)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalPaymentStatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RentalId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RentalId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RentalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

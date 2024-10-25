@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ManagementSystem.Models.Yard>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.YardName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YardAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YardTotalCapacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YardCurrentQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YardCurrentColor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.YardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YardAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YardTotalCapacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YardCurrentQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YardCurrentColor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.YardId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.YardId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.YardId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
