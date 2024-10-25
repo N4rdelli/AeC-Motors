@@ -84,3 +84,88 @@ body {
 .NavSideBarConfig:hover{
     color: var(--primary-color);
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #282c34;
+    border-bottom: 1px solid #333;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+   
+}
+
+    
+    .header input {
+        padding: 5px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        margin-right: 5px;
+        flex-grow:0.4; 
+    }
+
+    
+    .header .menu-icon {
+        font-size: 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .header .add-icon {
+        font-size: 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+
+
+.content {
+    padding: 20px;
+    margin-top: 60px; 
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.panel {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .panel h2 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .panel p {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .panel .button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+
+.content {
+    padding: 20px;
+}

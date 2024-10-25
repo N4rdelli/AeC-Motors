@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 
 namespace ManagementSystem.Models
 {
@@ -41,14 +42,7 @@ namespace ManagementSystem.Models
         [Display(Name = "Payment Status")]
         public bool RentalPaymentStatus { get; set; }
 
-        //public void CalculateRentalPrice()
-        //{
-        //    if (Vehicle != null)
-        //    {
-        //        int rentalDays = (RentalEnd - RentalStart).Days;
 
-        //        RentalPrince = Vehicle.VehicleRentalPrice * rentalDays;
-        //    }
-        //}
+        }
     }
-}
+

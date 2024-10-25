@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 
 namespace ManagementSystem.Models
 {
@@ -31,5 +32,27 @@ namespace ManagementSystem.Models
         [Required(ErrorMessage = "Please enter the vehicle's rental price")]
         [Range(0, (double)decimal.MaxValue, ErrorMessage = "The rental price must be a non-negative number")]
         public decimal VehicleRentalPrice { get; set; }
+        public class Carro
+        {
+            public int Id { get; set; }
+            public string Modelo { get; set; }
+            public string Marca { get; set; }
+            public decimal PrecoDiaria { get; set; }
+            // ... outros atributos
+        }
+
+        public class AluguelViewModel
+        {
+            public int CarroId { get; set; }
+            public DateTime DataInicio { get; set; }
+            public DateTime DataFim { get; set; }
+            public decimal Desconto { get; set; }
+            public decimal PrecoTotal { get; set; }
+        }
+
     }
-}
+    }
+
+   
+    
+
